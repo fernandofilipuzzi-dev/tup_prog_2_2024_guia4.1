@@ -581,16 +581,10 @@
 <XPD:REF name="BehavioralFeature">UbZdcqF5HkW73L88etGp4AAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:ATTR name="#TypedParameters" type="integer">9</XPD:ATTR>
-<XPD:REF name="TypedParameters[0]">C1lqMklYyU6Vm7iA35oA+QAA</XPD:REF>
-<XPD:REF name="TypedParameters[1]">w7abO8QVd0KV+M5xVx6elgAA</XPD:REF>
-<XPD:REF name="TypedParameters[2]">0smKUTAFj06wYmnHsKPfcgAA</XPD:REF>
-<XPD:REF name="TypedParameters[3]">TjQ9diyE50Sg7bAtbSJnRAAA</XPD:REF>
-<XPD:REF name="TypedParameters[4]">lKIUi5qr6keJzfI2sqYQRAAA</XPD:REF>
-<XPD:REF name="TypedParameters[5]">sXC5Qn96QUKlo8I4LyU1lAAA</XPD:REF>
-<XPD:REF name="TypedParameters[6]">CODI9KIq8EqjVYbJHnRtAAAA</XPD:REF>
-<XPD:REF name="TypedParameters[7]">vUF5ZcJgokyZrKJmYxj0YAAA</XPD:REF>
-<XPD:REF name="TypedParameters[8]">H6naphgTyUuyBqu6omzuvwAA</XPD:REF>
+<XPD:ATTR name="#TypedParameters" type="integer">3</XPD:ATTR>
+<XPD:REF name="TypedParameters[0]">0smKUTAFj06wYmnHsKPfcgAA</XPD:REF>
+<XPD:REF name="TypedParameters[1]">vUF5ZcJgokyZrKJmYxj0YAAA</XPD:REF>
+<XPD:REF name="TypedParameters[2]">H6naphgTyUuyBqu6omzuvwAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">4</XPD:ATTR>
 <XPD:REF name="Associations[0]">2u/wBwBlEE2sBIfbni23tAAA</XPD:REF>
 <XPD:REF name="Associations[1]">pYYUnHXOoUOgCKcQURApIgAA</XPD:REF>
@@ -886,7 +880,7 @@
 <XPD:REF name="Views[3]">xlQq7/qZpUqiEt6ao2UmIQAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="yNN63U137UO+FWZOiBvWOAAA">
-<XPD:ATTR name="Aggregation" type="UMLAggregationKind">akComposite</XPD:ATTR>
+<XPD:ATTR name="Aggregation" type="UMLAggregationKind">akAggregate</XPD:ATTR>
 <XPD:REF name="Association">2O9o3cy1tEmH7P68H1HnOgAA</XPD:REF>
 <XPD:REF name="Participant">K73ByWq//EWmCjuyaxyM9AAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
