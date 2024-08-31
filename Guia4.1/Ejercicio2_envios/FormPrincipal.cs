@@ -106,7 +106,7 @@ namespace Ejercicio2
             for(int idx = 0; idx < logistica.CantidadEnvios; idx++)
             {
                 Envio env = logistica.VerEnvio(idx);
-                tbEnvios.Text += env.ToString()+"\r\n";
+                tbEnvios.Text += env.ToString()+ "\r\n\r\n";
             }
         }
     }

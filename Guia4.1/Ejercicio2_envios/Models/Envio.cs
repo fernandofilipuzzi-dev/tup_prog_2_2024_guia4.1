@@ -56,7 +56,7 @@ namespace Ejercicio2.Models
 
         public override string ToString()
         {
-            return $"Envío: {CodigoAduanero,10:000000} Empresa:{Empresa}";
+            return $"Envío: {CodigoAduanero,10:000000} Empresa:{Empresa} Total:${ValorFinal:f2}\"";
         }
     }
 }

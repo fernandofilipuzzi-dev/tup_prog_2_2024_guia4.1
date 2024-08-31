@@ -174,7 +174,7 @@
             this.btnGuardarEnvio.Name = "btnGuardarEnvio";
             this.btnGuardarEnvio.Size = new System.Drawing.Size(149, 45);
             this.btnGuardarEnvio.TabIndex = 7;
-            this.btnGuardarEnvio.Text = "Guardar Enviio";
+            this.btnGuardarEnvio.Text = "Guardar Envio";
             this.btnGuardarEnvio.UseVisualStyleBackColor = true;
             this.btnGuardarEnvio.Click += new System.EventHandler(this.btnGuardarEnvio_Click);
             // 
