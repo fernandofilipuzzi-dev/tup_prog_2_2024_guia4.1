@@ -20,7 +20,7 @@ namespace Ejercicio1
         private void btnPrueba_Click(object sender, EventArgs e)
         {
             #region casos de prueba
-            Envio[] envios = new Envio[]
+            Envio[] envios = new Envio[] //lista de envíos planificados
             {
                 new Envio(2423),
                 new Envio(2323),
@@ -28,7 +28,7 @@ namespace Ejercicio1
                 new Envio(1423)
             };
 
-            ArrayList t = new ArrayList()
+            ArrayList agentesCargos = new ArrayList()  //agentes de recargos
             {
                 new Transporte(2344,23),
                 new Aduana(23244),
@@ -36,9 +36,9 @@ namespace Ejercicio1
             #endregion
 
             #region proceso envios
-            foreach (IProcesadorEnvios pr in t)
+            foreach (IProcesadorEnvios agente in agentesCargos)
             {
-                pr.ProcesarEnvios( envios );
+                agente.ProcesarEnvios( envios );
             }
             #endregion
 
@@ -46,7 +46,7 @@ namespace Ejercicio1
             Ordenar(envios, envios.Length);//por lo del length, se que el vector esta completo!
             foreach (IProcesable env in envios)
             {
-                tbVer.Text += $"{env.ToString()}\r\n";//numero aduanero
+                tbVer.Text += $"{env.ToString()}\r\n";//número aduanero
 
                 for (int idx = 0; idx < env.CantidadCostos; idx++) 
                 {
