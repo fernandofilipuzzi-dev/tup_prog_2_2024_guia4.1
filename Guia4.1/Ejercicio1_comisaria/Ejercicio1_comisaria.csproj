@@ -46,16 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\ICosto.cs" />
+    <Compile Include="API\IProcesable.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Arresto.cs" />
-    <Compile Include="Models\Incidente.cs" />
-    <Compile Include="Models\Denuncia.cs" />
-    <Compile Include="Models\Comisaria.cs" />
+    <Compile Include="Cliente\Costo.cs" />
+    <Compile Include="Proveedores\Aduana.cs" />
+    <Compile Include="Proveedores\Transporte.cs" />
+    <Compile Include="Cliente\Envio.cs" />
+    <Compile Include="API\IProcesadorEnvios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPrincipal.resx">
@@ -87,5 +90,6 @@
   <ItemGroup>
     <Content Include="UML\ejercicio1.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

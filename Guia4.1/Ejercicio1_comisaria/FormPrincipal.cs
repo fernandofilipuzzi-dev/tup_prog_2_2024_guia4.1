@@ -1,47 +1,75 @@
-﻿using Ejercicio1.Models;
+﻿
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using Ejercicio1.Proveedores;
+using Ejercicio1.API;
+using Ejercicio1.Cliente;
 
 namespace Ejercicio1
 {
     public partial class FormPrincipal : Form
     {
+
         public FormPrincipal()
         {
             InitializeComponent();
         }
 
-        ArrayList envios = new ArrayList();
 
-        private void btnAltaEnvio_Click(object sender, EventArgs e)
+        private void btnPrueba_Click(object sender, EventArgs e)
         {
-            Envio env;
-            
-            env=new Envio();
-            env.AgregarCosto(new Fijo("Peaje puente Zárate", 300));
-            env.AgregarCosto(new Comisaria("Combustible", 1500.5, 500));
-            envios.Add(env);
+            #region casos de prueba
+            Envio[] envios = new Envio[]
+            {
+                new Envio(2423),
+                new Envio(2323),
+                new Envio(2293),
+                new Envio(1423)
+            };
 
-            env = new Envio();
-            env.AgregarCosto(new Fijo("Peaje túnel", 300));
-            env.AgregarCosto(new Comisaria("Horas de conducción", 500, 10));
-            envios.Add(env);
+            ArrayList t = new ArrayList()
+            {
+                new Transporte(2344,23),
+                new Aduana(23244),
+            };
+            #endregion
+
+            #region proceso envios
+            foreach (IProcesadorEnvios pr in t)
+            {
+                pr.ProcesarEnvios( envios );
+            }
+            #endregion
+
+            #region impresión de la lista de envíos
+            Ordenar(envios, envios.Length);//por lo del length, se que el vector esta completo!
+            foreach (IProcesable env in envios)
+            {
+                tbVer.Text += $"{env.ToString()}\r\n";//numero aduanero
+
+                for (int idx = 0; idx < env.CantidadCostos; idx++) 
+                {
+                    tbVer.Text += env.VerCosto(idx).ToString() + "\r\n";//concepto y valor
+                }
+                tbVer.Text += $"Total:{env.CostoTotal:f2}\r\n\r\n";//total
+            }
+            #endregion
         }
 
-        private void btnListarCostos_Click(object sender, EventArgs e)
+        private void Ordenar(IComparable[] envios, int cantidad)
         {
-            foreach (Envio env in envios)
+            for (int n = 0; n < cantidad -1; n++)
             {
-                textBox1.Text += env.VerDetalle();
-                textBox1.Text += $"Total:$ {env.ValorTotal,10:f2}\r\n\r\n";
+                for (int m = n+1; m < cantidad ; m++)
+                {
+                    if (envios[n].CompareTo(envios[m]) > 0)
+                    {
+                        IComparable aux = envios[m];
+                        envios[m] = envios[n];
+                        envios[n] = aux;
+                    }
+                }
             }
         }
     }
