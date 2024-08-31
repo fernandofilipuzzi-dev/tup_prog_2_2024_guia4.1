@@ -35,7 +35,7 @@
             this.lbEmpresa = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbEdicionCostos = new System.Windows.Forms.GroupBox();
             this.lbxVerCostos = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnListasEnvios = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbEdicionCostos.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,21 +116,22 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Código Aduanero";
             // 
-            // groupBox2
+            // gbEdicionCostos
             // 
-            this.groupBox2.Controls.Add(this.lbxVerCostos);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnGuardarEnvio);
-            this.groupBox2.Controls.Add(this.btnAgregarCosto);
-            this.groupBox2.Controls.Add(this.cbCostos);
-            this.groupBox2.Location = new System.Drawing.Point(14, 175);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(512, 232);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Edición de costos";
+            this.gbEdicionCostos.Controls.Add(this.lbxVerCostos);
+            this.gbEdicionCostos.Controls.Add(this.label4);
+            this.gbEdicionCostos.Controls.Add(this.label3);
+            this.gbEdicionCostos.Controls.Add(this.label1);
+            this.gbEdicionCostos.Controls.Add(this.btnGuardarEnvio);
+            this.gbEdicionCostos.Controls.Add(this.btnAgregarCosto);
+            this.gbEdicionCostos.Controls.Add(this.cbCostos);
+            this.gbEdicionCostos.Enabled = false;
+            this.gbEdicionCostos.Location = new System.Drawing.Point(14, 175);
+            this.gbEdicionCostos.Name = "gbEdicionCostos";
+            this.gbEdicionCostos.Size = new System.Drawing.Size(512, 232);
+            this.gbEdicionCostos.TabIndex = 7;
+            this.gbEdicionCostos.TabStop = false;
+            this.gbEdicionCostos.Text = "Edición de costos";
             // 
             // lbxVerCostos
             // 
@@ -222,7 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(538, 604);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbEdicionCostos);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -232,8 +233,8 @@
             this.Text = "Ejercicio 2";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbEdicionCostos.ResumeLayout(false);
+            this.gbEdicionCostos.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -245,7 +246,7 @@
         private System.Windows.Forms.TextBox tbCodigoAduanero;
         private System.Windows.Forms.Button btnVerAltaEnvio;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbEdicionCostos;
         private System.Windows.Forms.Button btnGuardarEnvio;
         private System.Windows.Forms.Button btnAgregarCosto;
         private System.Windows.Forms.ComboBox cbCostos;

@@ -24,6 +24,8 @@ namespace Ejercicio2
 
         private void btnVerAltaEnvio_Click(object sender, EventArgs e)
         {
+
+
             int codigoAduanero = Convert.ToInt32(tbCodigoAduanero.Text);
             int idx= logistica.VerEnvioPorCodigo(codigoAduanero);
             envioSeleccionado = null;
@@ -41,6 +43,8 @@ namespace Ejercicio2
                 {
                     string empresa = formDatos.tbEmpresa.Text;
                     envioSeleccionado = new Envio(codigoAduanero, empresa);
+
+                    gbEdicionCostos.Enabled = true;
                 }
                 #endregion
             }
@@ -70,7 +74,8 @@ namespace Ejercicio2
                 tbCodigoAduanero.Clear();
                 lbEmpresa.Text = "";
                 lbxVerCostos.Items.Clear();
-
+                gbEdicionCostos.Enabled = false;
+                envioSeleccionado = null;
                 #endregion
             }
         }
